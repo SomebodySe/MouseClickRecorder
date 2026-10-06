@@ -45,6 +45,7 @@ private:
     int executingRecordIndex = -1;
     int executingPointIndex = 0;
     bool mouseDown = false;
+    QPoint originalMousePos;
 
     void executeRecord(int index);
     void executeNextPoint();

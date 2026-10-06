@@ -97,6 +97,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
     <QtRcc Include="MouseClickRecorder.qrc" />
     <QtUic Include="MouseClickRecorder.ui" />
     <QtMoc Include="MouseClickRecorder.h" />

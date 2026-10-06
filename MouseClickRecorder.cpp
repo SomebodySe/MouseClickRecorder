@@ -262,17 +262,18 @@ void MouseClickRecorder::executeRecord(int index)
 {
     if (index < 0 || index >= records.size())
         return;
-
     if (records[index].points.isEmpty())
         return;
-
     if (clickTimer->isActive() || mouseDown)
         return;
+
+    POINT p;
+    GetCursorPos(&p);
+    originalMousePos = QPoint(p.x, p.y);
 
     executingRecordIndex = index;
     executingPointIndex = 0;
     mouseDown = false;
-
     executeNextPoint();
 }
 
@@ -287,6 +288,7 @@ void MouseClickRecorder::executeNextPoint()
 
     if (executingPointIndex >= points.size()) {
         mouseDown = false;
+        SetCursorPos(originalMousePos.x(), originalMousePos.y());
         executingRecordIndex = -1;
         return;
     }
