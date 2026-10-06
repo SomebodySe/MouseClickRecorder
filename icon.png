@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="64"
+     height="64"
+     viewBox="0 0 64 64">
+
+  <!-- 白色方形背景 -->
+  <rect x="0" y="0" width="64" height="64" fill="#FFFFFF"/>
+
+  <!-- 黑色图标 -->
+  <g fill="none"
+     stroke="#000000"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <!-- 鼠标指针 -->
+    <path d="M14 8 V44 L25 35 L32 50 L38 47 L31 32 L44 30 Z"/>
+
+    <!-- 执行/播放 -->
+    <path d="M45 42 L55 48 L45 54 Z"/>
+
+  </g>
+</svg>
